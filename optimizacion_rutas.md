@@ -25,6 +25,7 @@ Existen varios algoritmos que permiten trazar rutas eficientes:
 Aquí un ejemplo de cómo implementar la optimización de rutas en Python utilizando el algoritmo A\*:
 
 ```python
+
 import heapq
 
 def a_star_search(graph, start, goal):
