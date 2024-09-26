@@ -9,3 +9,6 @@ Repositorio dedicado al uso de drones para entregas de paquetes. Incluye código
 - **Estudios de caso**: Ejemplos de implementaciones reales de entregas con drones en entornos urbanos y rurales.
 - **Investigación y tendencias**: Documentos y enlaces sobre las tecnologías actuales y futuras que impulsan este campo.
 - **Simulaciones y visualización**: Herramientas y ejemplos que muestran cómo operan los drones en distintas condiciones.
+
+  ### [Introducción](introduccion.md)
+  ### [Optimización de rutas](optimizacion_rutas.md)
