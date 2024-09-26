@@ -2,7 +2,7 @@
 
 Los **drones** están revolucionando la logística moderna. Gracias a su capacidad para volar sobre tráfico y terrenos difíciles, se están convirtiendo en una opción viable para **entregas rápidas y eficientes**.
 
-![Dron de entrega](https://example.com/imagen-drone.png)
+![Dron de entrega](https://i.ytimg.com/vi/mzhvR4wm__M/maxresdefault.jpg)
 
 ### ¿Por qué usar drones?
 
