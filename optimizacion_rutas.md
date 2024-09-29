@@ -26,33 +26,27 @@ Aquí un ejemplo de cómo implementar la optimización de rutas en Python utiliz
 
 ```python
 
-while open_list:
-        _, current = heapq.heappop(open_list)
+        import heapq
 
-        if current == goal:
-            break
+        def a_star_search(graph, start, goal):
+            open_list = []
+            heapq.heappush(open_list, (0, start))
+            came_from = {start: None}
+            g_score = {start: 0}
 
-import heapq
+            while open_list:
+                _, current = heapq.heappop(open_list)
 
-def a_star_search(graph, start, goal):
-    open_list = []
-    heapq.heappush(open_list, (0, start))
-    came_from = {start: None}
-    g_score = {start: 0}
+                if current == goal:
+                    break
 
-    while open_list:
-        _, current = heapq.heappop(open_list)
+                for neighbor, cost in graph[current]:
+                    tentative_g_score = g_score[current] + cost
 
-        if current == goal:
-            break
+                    if neighbor not in g_score or tentative_g_score < g_score[neighbor]:
+                        g_score[neighbor] = tentative_g_score
+                        priority = tentative_g_score
+                        heapq.heappush(open_list, (priority, neighbor))
+                        came_from[neighbor] = current
 
-        for neighbor, cost in graph[current]:
-            tentative_g_score = g_score[current] + cost
-
-            if neighbor not in g_score or tentative_g_score < g_score[neighbor]:
-                g_score[neighbor] = tentative_g_score
-                priority = tentative_g_score
-                heapq.heappush(open_list, (priority, neighbor))
-                came_from[neighbor] = current
-
-    return came_from
+            return came_from
