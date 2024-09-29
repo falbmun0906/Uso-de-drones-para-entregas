@@ -26,6 +26,12 @@ Aquí un ejemplo de cómo implementar la optimización de rutas en Python utiliz
 
 ```python
 
+while open_list:
+        _, current = heapq.heappop(open_list)
+
+        if current == goal:
+            break
+
 import heapq
 
 def a_star_search(graph, start, goal):
